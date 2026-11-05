@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --color-primary: #168DE2;
+  --color-deep-blue: #123B82;
+  --color-accent-cyan: #15C8D9;
+  --color-dark-navy: #101B32;
+  --color-bg: #F7F9FC;
+  --color-text: #17243A;
+}
+
+/* Custom scrollbars and tabular numbers utility */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Smooth transitions */
+* {
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+.dark * {
+  border-color: rgba(255, 255, 255, 0.1);
+}

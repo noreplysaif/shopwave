@@ -1,0 +1,40 @@
+type User @table {
+  displayName: String!
+  email: String!
+  role: String!
+  bio: String!
+  profileImageUrl: String
+  industryFocus: String
+}
+
+type Skill @table {
+  name: String!
+  category: String!
+}
+
+type MentorshipSession @table {
+  scheduledAt: Timestamp!
+  status: String!
+  mentee: User!
+  mentor: User!
+}
+
+type LearningGoal @table {
+  title: String!
+  description: String!
+  isCompleted: Boolean!
+  mentee: User!
+}
+
+type Resource @table {
+  title: String!
+  url: String!
+  type: String!
+  description: String
+}
+
+type UserSkill @table {
+  level: Int!
+  user: User!
+  skill: Skill!
+}

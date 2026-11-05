@@ -1,0 +1,1231 @@
+# MASTER PROJECT PROMPT: SHOP WAVE
+## Premium Electronics E-commerce Platform & Complete Admin Management System
+
+### 1. YOUR ROLE
+
+Act as a senior full-stack developer, software architect, professional UI/UX designer, e-commerce specialist, database engineer, and cybersecurity engineer.
+
+Your task is to design and develop a complete, modern, premium electronics e-commerce platform named **SHOP WAVE**.
+
+This must be a fully functional shopping website with a separate, powerful administration system.
+
+Do not create a simple static website or ordinary e-commerce template.
+
+Build a complete e-commerce application where:
+- Customers can browse and purchase products.
+- Administrators can control the entire store.
+- Admins can add unlimited new products.
+- Newly added products automatically appear on the storefront.
+- Customers can purchase those products.
+- Orders, inventory, customers, payments, promotions, and website content can be managed from the admin panel.
+
+The final result should look and behave like a premium commercial e-commerce platform.
+
+---
+
+# 2. BRAND IDENTITY
+
+Brand Name: SHOP WAVE  
+Business Type: Electronics E-commerce  
+Tagline: Technology Meets Lifestyle
+
+Use the uploaded ShopWave logo as the primary brand identity.
+
+Logo requirements:
+- Use the provided logo without redesigning it.
+- Preserve its original proportions.
+- Do not distort, recolor, or modify the logo.
+- Use appropriate sizing for desktop and mobile.
+- Use the logo in the navigation bar, login pages, admin dashboard, and footer.
+- Use a suitable favicon derived from the logo.
+
+### Brand Colors
+
+Primary Blue: #168DE2  
+Deep Blue: #123B82  
+Accent Cyan: #15C8D9  
+Dark Navy: #101B32  
+Background: #F7F9FC  
+White: #FFFFFF  
+Text: #17243A
+
+### Design Direction
+
+Use a premium minimal design inspired by Apple Store, Samsung, and modern technology retailers.
+
+Design characteristics:
+- Clean and spacious layouts.
+- Premium product cards.
+- Beautiful typography.
+- Smooth transitions.
+- Subtle gradients.
+- Modern rounded corners.
+- Professional icons.
+- High-quality product imagery.
+- Elegant hover effects.
+- Consistent spacing.
+- Professional mobile navigation.
+
+Avoid excessive gradients, unnecessary animations, cluttered layouts, and generic template designs.
+
+---
+
+# 3. TECHNOLOGY STACK
+
+Build the project using:
+
+Frontend:
+- HTML5
+- CSS3
+- Vanilla JavaScript (ES6+)
+- Responsive layouts
+- Modular and reusable components
+
+Backend architecture:
+- Prepare a clean API integration layer.
+- Use Firebase or a suitable REST API backend when backend integration is enabled.
+- Keep authentication, database, storage, orders, and payments modular.
+- Do not mix all application logic into one JavaScript file.
+
+Initial development mode:
+- Create a fully functional frontend demonstration.
+- Use localStorage or IndexedDB for demo persistence.
+- Make the application work without requiring a backend server.
+- Seed realistic sample products and orders.
+- Prepare the architecture for future database integration.
+
+Important:
+Frontend-only authentication and localStorage are for demonstration purposes, not secure production authentication. Never present a client-side admin password as production security. Prepare proper server-side authentication and authorization for production.
+
+---
+
+# 4. WEBSITE STRUCTURE
+
+Create the following pages.
+
+### Customer-facing pages
+
+1. Home
+2. Shop / All Products
+3. Product Details
+4. Product Categories
+5. Search Results
+6. Shopping Cart
+7. Checkout
+8. Customer Login
+9. Customer Registration
+10. Customer Dashboard
+11. My Orders
+12. Order Tracking
+13. Wishlist
+14. Compare Products
+15. About Us
+16. Contact Us
+17. FAQ
+18. Privacy Policy
+19. Terms & Conditions
+20. Return & Refund Policy
+21. 404 Page
+
+### Administration pages
+
+1. Admin Login
+2. Admin Dashboard
+3. Product Management
+4. Add New Product
+5. Edit Product
+6. Category Management
+7. Brand Management
+8. Order Management
+9. Customer Management
+10. Inventory Management
+11. Coupon Management
+12. Payment Management
+13. Reviews Management
+14. Banner & Slider Management
+15. Homepage Content Management
+16. Reports & Analytics
+17. Website Settings
+18. Admin Profile
+19. Admin User & Role Management
+20. Activity Logs
+
+The administration system must be separate from the customer-facing website.
+
+---
+
+# 5. HOMEPAGE DESIGN
+
+Build a premium and highly interactive homepage.
+
+### Navigation Bar
+
+Include:
+- ShopWave logo.
+- Home.
+- Shop.
+- Categories dropdown.
+- Deals.
+- New Arrivals.
+- About.
+- Contact.
+- Search icon or search bar.
+- Wishlist icon.
+- Account icon.
+- Shopping cart with live item counter.
+
+Make the navigation sticky on scroll.
+
+Mobile navigation should use a professional slide-out menu.
+
+### Hero Section
+
+Create an attractive hero section with:
+- Large promotional headline.
+- Short description.
+- Shop Now button.
+- Explore Collection button.
+- Premium electronics promotional imagery.
+- Optional promotional slider.
+
+Allow administrators to change hero images, titles, descriptions, buttons, and links from the admin panel.
+
+### Homepage Sections
+
+Include:
+
+1. Hero banner.
+2. Featured categories.
+3. Flash sales.
+4. Trending products.
+5. Best sellers.
+6. New arrivals.
+7. Featured brands.
+8. Recommended products.
+9. Special promotional banner.
+10. Customer testimonials.
+11. Newsletter subscription.
+12. Trust badges.
+13. Footer.
+
+All product sections must be dynamically generated from the product database.
+
+If the admin adds a new product and marks it as featured, it should automatically appear in the relevant homepage section.
+
+---
+
+# 6. COMPLETE PRODUCT MANAGEMENT SYSTEM
+
+This is one of the most important requirements.
+
+The admin must be able to create and manage unlimited products without modifying source code.
+
+### Add New Product Form
+
+Create a professional product creation interface.
+
+Product fields:
+
+Basic Information:
+- Product Name.
+- Product Slug.
+- SKU.
+- Product Short Description.
+- Full Product Description.
+- Product Category.
+- Product Subcategory.
+- Brand.
+- Product Type.
+
+Pricing:
+- Regular Price.
+- Sale Price.
+- Discount Percentage (automatically calculated).
+- Purchase Cost (admin only).
+- Currency: BDT (৳).
+
+Inventory:
+- Stock Quantity.
+- Stock Status.
+- Low Stock Alert.
+- SKU.
+- Allow Backorders toggle.
+
+Product Images:
+- Main Product Image.
+- Multiple Gallery Images.
+- Image Preview.
+- Image Removal.
+- Image Reordering.
+
+Additional Information:
+- Product Specifications.
+- Technical Details.
+- Color Variations.
+- Size Variations (where applicable).
+- Product Tags.
+- Warranty Information.
+- Weight.
+- Dimensions.
+
+Product Visibility:
+- Draft.
+- Published.
+- Hidden.
+- Featured Product.
+- Best Seller.
+- New Arrival.
+- Flash Sale.
+
+### Product Management Actions
+
+Administrators must be able to:
+
+- Add new products.
+- Edit existing products.
+- Delete products.
+- Duplicate products.
+- Publish or unpublish products.
+- Update prices.
+- Change stock quantities.
+- Upload multiple images.
+- Assign categories.
+- Manage variations.
+- Search products.
+- Filter products.
+- Sort products.
+- Bulk update products.
+- Import and export products through CSV.
+
+### Critical Product Synchronization
+
+When an administrator creates a new product:
+
+1. Save the product.
+2. Update the product catalog.
+3. Automatically display it on the storefront.
+4. Display it in its assigned category.
+5. Make it searchable.
+6. Allow customers to open its details.
+7. Allow customers to add it to their cart.
+8. Allow customers to purchase it.
+9. Update inventory after successful order processing.
+
+Do not use hardcoded product cards.
+
+The storefront must always use dynamically stored product data.
+
+---
+
+# 7. PRODUCT DETAILS PAGE
+
+Create a premium product details experience.
+
+Include:
+- Multiple product images.
+- Image gallery.
+- Image zoom.
+- Product name.
+- Brand.
+- SKU.
+- Price.
+- Discount.
+- Availability.
+- Star ratings.
+- Customer reviews.
+- Product description.
+- Technical specifications.
+- Warranty information.
+- Color selection.
+- Quantity selector.
+- Add to Cart.
+- Buy Now.
+- Add to Wishlist.
+- Compare Product.
+- Related Products.
+- Recently Viewed Products.
+
+Add to Cart must work properly.
+
+Buy Now should take the customer directly to checkout with the selected product.
+
+Validate stock and product variations before adding products to the cart.
+
+---
+
+# 8. SHOPPING CART SYSTEM
+
+Develop a fully functional shopping cart.
+
+Features:
+- Add products.
+- Remove products.
+- Increase quantity.
+- Decrease quantity.
+- Update cart automatically.
+- Display product images.
+- Display individual prices.
+- Calculate subtotal.
+- Apply discount codes.
+- Calculate delivery charges.
+- Calculate total amount.
+- Save cart between visits.
+- Prevent purchasing quantities exceeding available stock.
+
+Cart must update dynamically without refreshing the page.
+
+---
+
+# 9. CHECKOUT SYSTEM
+
+Create a clean, professional, multi-section checkout page.
+
+Customer Information:
+- Full Name.
+- Phone Number.
+- Email.
+- District.
+- City.
+- Area.
+- Complete Delivery Address.
+
+Order Information:
+- Products.
+- Quantities.
+- Product Prices.
+- Subtotal.
+- Discount.
+- Delivery Charge.
+- Total Payable.
+
+Delivery Options:
+- Inside Dhaka.
+- Outside Dhaka.
+- Custom delivery charge configured by admin.
+
+Payment Methods:
+
+1. Cash on Delivery (COD).
+2. bKash.
+3. Nagad.
+
+Payment requirements:
+
+- Show the relevant payment instructions.
+- Allow customers to provide transaction IDs for manual mobile payment verification.
+- Display payment status.
+- Save payment information with the order.
+- Allow administrators to verify or reject manual payments.
+
+Important:
+Do not simulate a successful real bKash or Nagad transaction. Prepare proper payment gateway integration points. Real online payments must use an authorized payment gateway and server-side verification.
+
+After checkout:
+- Generate a unique order ID.
+- Save the order.
+- Display an order confirmation page.
+- Show order details.
+- Allow customers to track the order.
+
+---
+
+# 10. CUSTOMER ACCOUNT SYSTEM
+
+Create a complete customer account system.
+
+Registration:
+- Name.
+- Email.
+- Phone.
+- Password.
+- Confirm Password.
+
+Login:
+- Email or phone.
+- Password.
+- Remember Me.
+- Forgot Password.
+
+Customer Dashboard:
+
+- Profile Overview.
+- Edit Profile.
+- Change Password.
+- My Orders.
+- Order Details.
+- Track Orders.
+- Wishlist.
+- Saved Addresses.
+- Reviews.
+- Logout.
+
+Customers should be able to view their complete order history.
+
+Each customer must only be able to access their own account and orders.
+
+---
+
+# 11. ORDER MANAGEMENT SYSTEM
+
+Create a comprehensive order management system.
+
+Order statuses:
+
+- Pending.
+- Confirmed.
+- Processing.
+- Packed.
+- Shipped.
+- Out for Delivery.
+- Delivered.
+- Cancelled.
+- Returned.
+- Refunded.
+
+Admin capabilities:
+
+- View all orders.
+- Search by order ID.
+- Search by customer.
+- Filter by date.
+- Filter by payment method.
+- Filter by order status.
+- View complete order details.
+- Update order status.
+- Add internal order notes.
+- Add tracking information.
+- Verify payments.
+- Print invoices.
+- Download invoices.
+- Cancel orders.
+- Process returns and refunds.
+- Export order records.
+
+When an order status changes, customers should be able to see the updated status in their dashboard.
+
+Inventory should be adjusted consistently according to the order lifecycle. Prevent duplicate stock deductions and restore stock appropriately when an order is cancelled or returned.
+
+---
+
+# 12. COMPLETE ADMIN DASHBOARD
+
+Build a separate professional admin dashboard.
+
+Admin URL example:
+
+/admin/
+
+Admin login URL:
+
+/admin/login/
+
+Design a premium dashboard with:
+- Collapsible sidebar.
+- Top navigation bar.
+- Search.
+- Notifications.
+- Admin profile.
+- Quick actions.
+- Responsive mobile layout.
+- Light and dark mode.
+
+### Dashboard Overview
+
+Display:
+
+- Total Revenue.
+- Total Orders.
+- Total Products.
+- Total Customers.
+- Pending Orders.
+- Completed Orders.
+- Low Stock Products.
+- Out of Stock Products.
+- Total Sales.
+- Average Order Value.
+
+Add interactive charts:
+
+- Daily Sales.
+- Weekly Sales.
+- Monthly Sales.
+- Yearly Sales.
+- Revenue Comparison.
+- Order Statistics.
+- Top Selling Products.
+- Category Performance.
+
+Include:
+- Recent Orders.
+- Recent Customers.
+- Best Selling Products.
+- Low Stock Alerts.
+- Recent Admin Activities.
+
+Dashboard statistics must be calculated from actual stored application data, not hardcoded numbers.
+
+### ADMIN MUST CONTROL THE ENTIRE WEBSITE
+
+Provide complete management functionality for:
+
+**1. Products**
+- Add.
+- Edit.
+- Delete.
+- Publish.
+- Unpublish.
+- Duplicate.
+- Import.
+- Export.
+
+**2. Categories**
+- Create categories.
+- Edit categories.
+- Delete categories.
+- Upload category images.
+- Manage subcategories.
+- Set category visibility.
+
+**3. Brands**
+- Add brands.
+- Edit brands.
+- Delete brands.
+- Upload brand logos.
+
+**4. Orders**
+- View.
+- Manage.
+- Update status.
+- Verify payment.
+- Print invoice.
+- Export.
+
+**5. Customers**
+- View customers.
+- Search customers.
+- View customer profiles.
+- View order history.
+- Manage customer accounts.
+- Disable or reactivate accounts.
+
+**6. Inventory**
+- Update stock.
+- View stock history.
+- Low-stock notifications.
+- Out-of-stock alerts.
+- Stock adjustment records.
+
+**7. Promotions**
+- Create discount coupons.
+- Percentage discounts.
+- Fixed discounts.
+- Minimum purchase requirements.
+- Coupon expiration dates.
+- Usage limits.
+- Product-specific discounts.
+- Category-specific discounts.
+
+**8. Homepage Management**
+- Change hero banners.
+- Add promotional banners.
+- Change homepage headings.
+- Manage featured products.
+- Manage new arrivals.
+- Manage best sellers.
+- Show or hide homepage sections.
+- Change promotional content.
+
+**9. Reviews**
+- View customer reviews.
+- Approve reviews.
+- Reject reviews.
+- Delete inappropriate reviews.
+
+**10. Website Settings**
+- Website name.
+- Logo.
+- Favicon.
+- Contact email.
+- Phone number.
+- WhatsApp number.
+- Address.
+- Social media links.
+- Currency.
+- Delivery charges.
+- Tax settings.
+- Store availability.
+- Maintenance mode.
+
+**11. Admin User Management**
+- Create additional admins.
+- Edit admin profiles.
+- Assign roles.
+- Control permissions.
+- Deactivate admin accounts.
+
+**12. Reports**
+- Sales reports.
+- Revenue reports.
+- Order reports.
+- Product reports.
+- Customer reports.
+- Inventory reports.
+- Payment reports.
+- CSV exports.
+
+**13. Activity Logs**
+- Admin login history.
+- Product changes.
+- Order updates.
+- Stock changes.
+- Settings changes.
+- User management activities.
+
+---
+
+# 13. ADMIN ROLE & PERMISSION SYSTEM
+
+Implement role-based access control.
+
+Roles:
+
+Super Admin:
+- Full access to everything.
+- Manage all admins.
+- Change website settings.
+- Manage products, orders, customers, and payments.
+
+Store Manager:
+- Manage products.
+- Manage inventory.
+- Manage orders.
+- Manage customers.
+- View reports.
+
+Product Manager:
+- Manage products.
+- Manage categories.
+- Manage brands.
+- Manage product images and pricing.
+
+Order Manager:
+- View orders.
+- Process orders.
+- Update delivery status.
+- Manage invoices.
+
+Support Manager:
+- View customer information.
+- Handle customer inquiries.
+- View order information.
+
+Permissions must be enforced by the backend in production, not just hidden in the interface.
+
+---
+
+# 14. SEARCH & FILTER SYSTEM
+
+Implement a powerful search experience.
+
+Search by:
+- Product name.
+- Brand.
+- Category.
+- SKU.
+- Product tags.
+
+Filters:
+- Price range.
+- Brand.
+- Category.
+- Availability.
+- Rating.
+- Discount.
+- Product specifications.
+
+Sorting:
+- Newest.
+- Price Low to High.
+- Price High to Low.
+- Best Selling.
+- Highest Rated.
+- Most Popular.
+
+Add autocomplete search suggestions.
+
+Make search fast and responsive.
+
+---
+
+# 15. WISHLIST & PRODUCT COMPARISON
+
+Wishlist:
+- Add products.
+- Remove products.
+- View saved products.
+- Move products to cart.
+- Persist wishlist between visits.
+
+Product comparison:
+- Compare up to four products.
+- Display prices.
+- Compare specifications.
+- Compare brands.
+- Compare availability.
+- Remove products from comparison.
+
+---
+
+# 16. NOTIFICATION SYSTEM
+
+Create notification functionality.
+
+Customer notifications:
+- Order confirmation.
+- Payment status.
+- Order processing.
+- Shipping updates.
+- Delivery confirmation.
+- Promotional offers.
+
+Admin notifications:
+- New orders.
+- New customer registrations.
+- Low stock.
+- Out-of-stock products.
+- Payment verification requests.
+- New reviews.
+
+Prepare email and SMS integration points for future use.
+
+---
+
+# 17. INVENTORY MANAGEMENT
+
+Develop a proper inventory system.
+
+Features:
+- Stock tracking.
+- Stock adjustments.
+- Stock movement history.
+- Low-stock threshold.
+- Out-of-stock detection.
+- Inventory reports.
+- Product stock alerts.
+
+Important:
+The system must not allow overselling.
+
+Use reliable stock validation during checkout and order processing.
+
+---
+
+# 18. RESPONSIVE DESIGN
+
+The website must work perfectly on:
+
+- Desktop.
+- Laptop.
+- Tablet.
+- Android phones.
+- iPhones.
+
+Responsive requirements:
+
+Desktop:
+- Full navigation.
+- Multi-column product grids.
+- Spacious layout.
+- Professional dashboard.
+
+Tablet:
+- Adaptive navigation.
+- Responsive product grids.
+- Optimized content spacing.
+
+Mobile:
+- Mobile navigation.
+- Touch-friendly buttons.
+- Single or two-column product grids.
+- Responsive checkout.
+- Mobile-friendly admin dashboard.
+- No horizontal overflow.
+- Properly scaled images.
+- Easy-to-use cart.
+
+Test common viewport widths:
+- 320px.
+- 375px.
+- 425px.
+- 768px.
+- 1024px.
+- 1440px.
+- 1920px.
+
+Both the customer storefront and admin panel must be fully responsive.
+
+---
+
+# 19. MODERN INTERACTION & USER EXPERIENCE
+
+Implement:
+
+- Smooth page transitions.
+- Product hover animations.
+- Skeleton loading.
+- Toast notifications.
+- Loading indicators.
+- Confirmation dialogs.
+- Form validation.
+- Image previews.
+- Dynamic cart updates.
+- Responsive dropdown menus.
+- Interactive filters.
+- Animated counters.
+- Empty states.
+- Error states.
+- Success states.
+- Back-to-top button.
+- Breadcrumb navigation.
+- Dark and light themes.
+
+Use a consistent icon library such as Lucide.
+
+Animations should be subtle and performance-friendly.
+
+Respect reduced-motion accessibility settings.
+
+---
+
+# 20. SECURITY REQUIREMENTS
+
+Follow modern e-commerce security practices.
+
+Implement or prepare:
+
+- Secure authentication.
+- Password hashing on the backend.
+- Role-based authorization.
+- Input validation.
+- Output sanitization.
+- Protection against XSS.
+- CSRF protection where applicable.
+- Secure session handling.
+- Rate limiting.
+- Server-side price validation.
+- Server-side stock validation.
+- Secure payment verification.
+- Protected admin routes.
+- Database access rules.
+- Audit logs.
+- Safe file uploads.
+- Image type and size validation.
+
+Never store plain-text passwords.
+
+Never expose secret API keys in frontend JavaScript.
+
+Never trust prices, discounts, payment status, or permissions sent by the browser.
+
+---
+
+# 21. DATABASE ARCHITECTURE
+
+Prepare a clean database structure with these collections or tables:
+
+1. users
+2. admins
+3. roles
+4. permissions
+5. products
+6. product_images
+7. categories
+8. brands
+9. product_variations
+10. inventory
+11. inventory_logs
+12. orders
+13. order_items
+14. payments
+15. addresses
+16. coupons
+17. reviews
+18. wishlists
+19. banners
+20. notifications
+21. website_settings
+22. activity_logs
+
+Define appropriate relationships, identifiers, timestamps, validation rules, and indexes.
+
+Use unique product SKUs and unique order IDs.
+
+Do not mix demonstration data with production credentials.
+
+---
+
+# 22. PERFORMANCE & SEO
+
+Optimize the website for performance.
+
+Requirements:
+- Lazy-load product images.
+- Use optimized image formats.
+- Minimize unnecessary JavaScript.
+- Avoid unnecessary dependencies.
+- Implement pagination.
+- Use efficient product filtering.
+- Prevent unnecessary page reloads.
+- Use semantic HTML.
+- Add meta titles and descriptions.
+- Add Open Graph metadata.
+- Use canonical URLs.
+- Add product structured data.
+- Add sitemap support.
+- Add robots.txt.
+- Use descriptive image alt text.
+
+Optimize for Google search visibility and Core Web Vitals.
+
+---
+
+# 23. BANGLADESH E-COMMERCE CONFIGURATION
+
+Configure the store for Bangladesh.
+
+Currency:
+BDT (৳)
+
+Default locale:
+Bangladesh
+
+Payment options:
+- Cash on Delivery.
+- bKash.
+- Nagad.
+
+Customer information:
+- Bangladesh phone number.
+- District.
+- Area.
+- Delivery address.
+
+Delivery:
+- Inside Dhaka.
+- Outside Dhaka.
+- Configurable delivery fees.
+
+Allow administrators to customize payment instructions, delivery charges, and order policies.
+
+Keep payment gateway integration ready for authorized providers such as SSLCommerz or other suitable Bangladesh payment gateways.
+
+---
+
+# 24. PROJECT FILE STRUCTURE
+
+Keep the code organized and maintainable.
+
+Suggested structure:
+
+shopwave/
+│
+├── index.html
+├── shop.html
+├── product.html
+├── cart.html
+├── checkout.html
+├── login.html
+├── register.html
+├── account.html
+├── orders.html
+├── wishlist.html
+├── compare.html
+├── about.html
+├── contact.html
+│
+├── admin/
+│   ├── login.html
+│   ├── index.html
+│   ├── products.html
+│   ├── add-product.html
+│   ├── categories.html
+│   ├── brands.html
+│   ├── orders.html
+│   ├── customers.html
+│   ├── inventory.html
+│   ├── coupons.html
+│   ├── reviews.html
+│   ├── banners.html
+│   ├── reports.html
+│   ├── settings.html
+│   └── users.html
+│
+├── assets/
+│   ├── images/
+│   ├── products/
+│   ├── banners/
+│   ├── icons/
+│   └── logo/
+│
+├── css/
+│   ├── style.css
+│   ├── responsive.css
+│   ├── admin.css
+│   └── components.css
+│
+├── js/
+│   ├── app.js
+│   ├── products.js
+│   ├── cart.js
+│   ├── checkout.js
+│   ├── auth.js
+│   ├── wishlist.js
+│   ├── search.js
+│   ├── api.js
+│   ├── storage.js
+│   └── admin/
+│       ├── dashboard.js
+│       ├── products.js
+│       ├── orders.js
+│       ├── customers.js
+│       ├── inventory.js
+│       ├── reports.js
+│       └── settings.js
+│
+└── README.md
+
+You may improve this structure when necessary, but keep frontend, backend integration, admin functionality, and styling logically separated.
+
+---
+
+# 25. DEMONSTRATION DATA
+
+Populate the initial store with realistic sample electronics products.
+
+Suggested categories:
+
+- Smartphones.
+- Laptops.
+- Tablets.
+- Headphones.
+- Smart Watches.
+- Cameras.
+- Gaming Accessories.
+- Computer Accessories.
+- Speakers.
+- Smart Home Devices.
+
+Add at least 20 realistic sample products.
+
+Use suitable product images, descriptions, prices in BDT, specifications, and stock quantities.
+
+Add several sample orders and customers for demonstrating the admin dashboard.
+
+Clearly identify demo data and provide a way to reset the demo store.
+
+---
+
+# 26. FUNCTIONAL REQUIREMENTS & TESTING
+
+Do not consider the project complete merely because the pages look attractive.
+
+Test these complete workflows:
+
+Workflow 1: Product Creation
+
+Admin logs in → Opens Products → Adds a new product → Uploads image → Sets price and stock → Publishes product → Product appears on storefront.
+
+Workflow 2: Product Purchase
+
+Customer opens store → Searches product → Opens details → Adds to cart → Goes to checkout → Provides delivery information → Places order → Receives order confirmation.
+
+Workflow 3: Order Management
+
+Admin opens dashboard → Receives new order → Views details → Confirms order → Updates delivery status → Customer sees updated status.
+
+Workflow 4: Inventory
+
+Admin adds stock → Customer purchases product → Stock updates → Low-stock notification appears when threshold is reached.
+
+Workflow 5: Promotions
+
+Admin creates coupon → Customer enters coupon → System validates it → Discount is applied correctly.
+
+Workflow 6: Customer Accounts
+
+Customer registers → Logs in → Updates profile → Views orders → Tracks purchases.
+
+Workflow 7: Admin Permissions
+
+Super Admin creates another admin → Assigns a role → Restricted admin can only access authorized features.
+
+Workflow 8: Homepage Management
+
+Admin changes banner → Saves changes → Storefront displays the updated banner.
+
+Test all important actions, forms, buttons, navigation, validation, calculations, and error handling.
+
+---
+
+# 27. IMPORTANT DEVELOPMENT RULES
+
+1. Do not create a static mockup.
+2. Do not hardcode the entire product catalog.
+3. Do not create buttons that do nothing.
+4. Do not create fake admin statistics disconnected from application data.
+5. Do not leave product management incomplete.
+6. Do not leave the checkout workflow incomplete.
+7. Do not create non-functional navigation links.
+8. Do not use placeholder buttons for essential functionality.
+9. Do not allow customers to access admin pages.
+10. Do not allow unauthorized admins to access restricted features.
+11. Do not claim real payment integration without implementing and testing it.
+12. Make every major module reusable and maintainable.
+13. Keep all pages visually consistent.
+14. Ensure data remains available after page refresh in demo mode.
+15. Make the project easy to upgrade to a real backend.
+
+If a feature requires backend integration, implement the frontend interface and a clearly documented integration layer rather than pretending that a frontend simulation is a production implementation.
+
+---
+
+# 28. FINAL DELIVERABLE
+
+Deliver a complete SHOP WAVE e-commerce application containing:
+
+- Premium customer-facing website.
+- Complete product catalog.
+- Functional shopping cart.
+- Checkout experience.
+- Customer account system.
+- Separate admin login.
+- Complete admin dashboard.
+- Dynamic product management.
+- Order management.
+- Customer management.
+- Inventory management.
+- Payment management.
+- Coupon system.
+- Homepage management.
+- Reports and analytics.
+- Responsive mobile experience.
+- Secure backend-ready architecture.
+- Demo data.
+- Setup documentation.
+- Future backend integration instructions.
+
+### FINAL EXPECTATION
+
+The finished SHOP WAVE platform should feel like a real premium electronics shopping destination.
+
+The customer should be able to discover, compare, add, and purchase products easily.
+
+The administrator should be able to control the entire business from one dashboard.
+
+Most importantly:
+
+**When the administrator adds a new product, that product must automatically become available for customers to discover and purchase through the storefront.**
+
+Build the complete application, not just a design concept.
+
+Prioritize functional completeness, premium UI/UX, responsiveness, clean architecture, and maintainability.

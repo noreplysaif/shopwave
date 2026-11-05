@@ -1,0 +1,6 @@
+{
+  "name": "ShopWave - Electronics E-Commerce & Admin Platform",
+  "description": "Premium electronics e-commerce store with full administrative suite, live inventory, bKash/Nagad/COD checkout, order management, and RBAC.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

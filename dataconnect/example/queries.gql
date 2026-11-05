@@ -1,0 +1,160 @@
+mutation CreateUser($displayName: String!, $email: String!, $role: String!, $bio: String!) @auth(level: USER) {
+  user_insert(data: {id_expr: "auth.uid", displayName: $displayName, email: $email, role: $role, bio: $bio})
+}
+
+mutation UpdateUser($displayName: String, $bio: String) @auth(level: USER) {
+  user_update(key: {id_expr: "auth.uid"}, data: {displayName: $displayName, bio: $bio})
+}
+
+mutation DeleteUser @auth(level: USER) {
+  user_delete(key: {id_expr: "auth.uid"})
+}
+
+query GetCurrentUser @auth(level: USER) {
+  user(key: {id_expr: "auth.uid"}) {
+    displayName
+    email
+    role
+    bio
+  }
+}
+
+query ListUsers @auth(level: PUBLIC, insecureReason: "Listing users is required for finding mentors/mentees in the platform.") {
+  users {
+    displayName
+    role
+    industryFocus
+  }
+}
+
+mutation CreateSkill($name: String!, $category: String!) @auth(expr: "auth.token.admin == true") {
+  skill_insert(data: {name: $name, category: $category})
+}
+
+mutation UpdateSkill($id: UUID!, $category: String!) @auth(expr: "auth.token.admin == true") {
+  skill_update(key: {id: $id}, data: {category: $category})
+}
+
+mutation DeleteSkill($id: UUID!) @auth(expr: "auth.token.admin == true") {
+  skill_delete(key: {id: $id})
+}
+
+query GetSkill($id: UUID!) @auth(level: PUBLIC, insecureReason: "Skills are public reference data.") {
+  skill(id: $id) {
+    name
+    category
+  }
+}
+
+query ListSkills @auth(level: PUBLIC, insecureReason: "Skills are public reference data.") {
+  skills {
+    name
+    category
+  }
+}
+
+mutation CreateMentorshipSession($scheduledAt: Timestamp!, $mentorId: UUID!) @auth(level: USER) {
+  mentorshipSession_insert(data: {scheduledAt: $scheduledAt, mentorId: $mentorId, menteeId_expr: "auth.uid", status: "PENDING"})
+}
+
+mutation UpdateSessionStatus($id: UUID!, $status: String!) @auth(level: USER) {
+  mentorshipSession_update(key: {id: $id}, data: {status: $status})
+}
+
+mutation DeleteMentorshipSession($id: UUID!) @auth(level: USER) {
+  mentorshipSession_delete(key: {id: $id})
+}
+
+query GetMentorshipSession($id: UUID!) @auth(level: USER) {
+  mentorshipSession(id: $id) {
+    scheduledAt
+    status
+    mentee { displayName }
+    mentor { displayName }
+  }
+}
+
+query ListMySessions @auth(level: USER) {
+  mentorshipSessions(where: {_or: [{menteeId: {eq_expr: "auth.uid"}}, {mentorId: {eq_expr: "auth.uid"}}]}) {
+    scheduledAt
+    status
+  }
+}
+
+mutation CreateLearningGoal($title: String!, $description: String!) @auth(level: USER) {
+  learningGoal_insert(data: {title: $title, description: $description, isCompleted: false, menteeId_expr: "auth.uid"})
+}
+
+mutation UpdateLearningGoal($id: UUID!, $isCompleted: Boolean!) @auth(level: USER) {
+  learningGoal_update(key: {id: $id}, data: {isCompleted: $isCompleted})
+}
+
+mutation DeleteLearningGoal($id: UUID!) @auth(level: USER) {
+  learningGoal_delete(key: {id: $id})
+}
+
+query GetLearningGoal($id: UUID!) @auth(level: USER) {
+  learningGoal(id: $id) {
+    title
+    isCompleted
+  }
+}
+
+query ListMyGoals @auth(level: USER) {
+  learningGoals(where: {menteeId: {eq_expr: "auth.uid"}}) {
+    title
+    isCompleted
+  }
+}
+
+mutation CreateResource($title: String!, $url: String!, $type: String!) @auth(expr: "auth.token.admin == true") {
+  resource_insert(data: {title: $title, url: $url, type: $type})
+}
+
+mutation UpdateResource($id: UUID!, $description: String) @auth(expr: "auth.token.admin == true") {
+  resource_update(key: {id: $id}, data: {description: $description})
+}
+
+mutation DeleteResource($id: UUID!) @auth(expr: "auth.token.admin == true") {
+  resource_delete(key: {id: $id})
+}
+
+query GetResource($id: UUID!) @auth(level: PUBLIC, insecureReason: "Resources are public learning materials.") {
+  resource(id: $id) {
+    title
+    url
+  }
+}
+
+query ListResources @auth(level: PUBLIC, insecureReason: "Resources are public learning materials.") {
+  resources {
+    title
+    type
+  }
+}
+
+mutation AddUserSkill($skillId: UUID!, $level: Int!) @auth(level: USER) {
+  userSkill_insert(data: {skillId: $skillId, level: $level, userId_expr: "auth.uid"})
+}
+
+mutation UpdateUserSkillLevel($id: UUID!, $level: Int!) @auth(level: USER) {
+  userSkill_update(key: {id: $id}, data: {level: $level})
+}
+
+mutation RemoveUserSkill($id: UUID!) @auth(level: USER) {
+  userSkill_delete(key: {id: $id})
+}
+
+query GetUserSkill($id: UUID!) @auth(level: USER) {
+  userSkill(id: $id) {
+    level
+    skill { name }
+  }
+}
+
+query ListMySkills @auth(level: USER) {
+  userSkills(where: {userId: {eq_expr: "auth.uid"}}) {
+    level
+    skill { name }
+  }
+}

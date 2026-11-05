@@ -1,0 +1,29 @@
+mutation CreateSeedData @transaction {
+  users: user_insertMany(data: [
+    { displayName: "Alice Mentee", email: "alice@example.com", role: "Mentee", bio: "Learning web dev" },
+    { displayName: "Bob Mentor", email: "bob@example.com", role: "Mentor", bio: "Senior Software Engineer" },
+    { displayName: "Charlie Mentor", email: "charlie@example.com", role: "Mentor", bio: "Data Scientist" }
+  ])
+  skills: skill_insertMany(data: [
+    { name: "JavaScript", category: "Programming" },
+    { name: "Python", category: "Programming" },
+    { name: "UI Design", category: "Design" }
+  ])
+  resources: resource_insertMany(data: [
+    { title: "JS Guide", url: "https://javascript.info", type: "Article" },
+    { title: "Python Basics", url: "https://docs.python.org", type: "Documentation" },
+    { title: "Figma 101", url: "https://figma.com/learn", type: "Course" }
+  ])
+  userSkills: userSkill_insertMany(data: [
+    { level: 5, user: { id: "00000000-0000-0000-0000-000000000001" }, skill: { id: "00000000-0000-0000-0000-000000000001" } },
+    { level: 3, user: { id: "00000000-0000-0000-0000-000000000002" }, skill: { id: "00000000-0000-0000-0000-000000000002" } }
+  ])
+  goals: learningGoal_insertMany(data: [
+    { title: "Complete JS Course", description: "Finish the basic module", isCompleted: false, mentee: { id: "00000000-0000-0000-0000-000000000001" } },
+    { title: "Build Portfolio", description: "Deploy first app", isCompleted: true, mentee: { id: "00000000-0000-0000-0000-000000000001" } }
+  ])
+  sessions: mentorshipSession_insertMany(data: [
+    { scheduledAt: "2023-11-01T10:00:00Z", status: "Scheduled", mentee: { id: "00000000-0000-0000-0000-000000000001" }, mentor: { id: "00000000-0000-0000-0000-000000000002" } },
+    { scheduledAt: "2023-11-05T14:00:00Z", status: "Completed", mentee: { id: "00000000-0000-0000-0000-000000000001" }, mentor: { id: "00000000-0000-0000-0000-000000000003" } }
+  ])
+}
